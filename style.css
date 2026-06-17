@@ -171,7 +171,7 @@ em { color: var(--gold); }
 }
 
 /* ─── Narrative Blocks ─── */
-.narrative { max-width: 700px; margin: 0 auto 3rem; }
+.narrative { max-width: 700px; margin: 0 auto 3rem; text-align: center; }
 .narrative.narrow { max-width: 640px; }
 .narrative p { margin-bottom: 1.2rem; font-size: 1.05rem; }
 .narrative .lead {
@@ -185,7 +185,7 @@ em { color: var(--gold); }
   border-left: 3px solid var(--purple);
   background: rgba(123,45,142,0.05);
   font-style: italic; font-size: 1.05rem; color: var(--text);
-  position: relative;
+  position: relative; text-align: center;
 }
 .baron-marker {
   position: absolute; left: -0.6rem; top: 1.2rem;
@@ -249,7 +249,7 @@ em { color: var(--gold); }
 .lwa-card > p:last-child { font-size: 0.95rem; line-height: 1.7; }
 .lwa-footnote {
   text-align: center; font-size: 0.9rem; color: var(--text-dim);
-  max-width: 600px; margin: 0 auto;
+  max-width: 600px; margin: 2rem auto 0;
 }
 
 /* ─── Archetypes ─── */
@@ -305,6 +305,9 @@ em { color: var(--gold); }
   border: 1px solid var(--dark-border); color: var(--text-dim);
   background: var(--dark-card);
 }
+
+/* ─── Global section centering ─── */
+.section .container { text-align: center; }
 
 /* ─── Footer ─── */
 .site-footer {
