@@ -156,6 +156,9 @@ em { color: var(--gold); }
   color: var(--gold-dim); font-size: 1rem; letter-spacing: 0.6em; opacity: 0.35;
   user-select: none;
 }
+.veve-divider span {
+  padding-left: 0.6em;
+}
 
 /* ─── Sections ─── */
 .section { padding: var(--section-pad) 0; }
