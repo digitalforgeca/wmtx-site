@@ -1,0 +1,19 @@
+# WMTX — Whispermen: 1889 marketing site
+# Strategy: static (rsync to Dionysus)
+# No build step — raw HTML/CSS
+
+[project]
+name = "wmtx-site"
+strategy = "static"
+
+[build]
+disk_estimate_mb = 1
+
+[deploy]
+artifact_dest = "/opt/forge/services/dionysus/sites/wmtx"
+health_url = "https://wmtx.dforge.ca"
+health_timeout_secs = 10
+
+[notify]
+on_success = ["discord:#hephaestus"]
+on_failure = ["discord:#hephaestus"]
