@@ -313,16 +313,6 @@
       </div>
     </div>
 
-    <div class="section-media">
-      <div class="video-showcase">
-        <video autoplay muted loop playsinline preload="none">
-          <source src="assets/video/boss-actions.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="video-caption">Boss fight action showcase</p>
-      </div>
-    </div>
-
     <blockquote class="baron-quote">
       <span class="baron-marker">☠</span>
       <p>"The Garkain are hungry tonight. I'd recommend silver bullets - but watching you figure that out the hard way is more entertaining."</p>
@@ -362,30 +352,6 @@
     </div>
   </div>
 </section>
-
-<div class="veve-divider" aria-hidden="true"><span>☦ ✦ ☦</span></div>
-
-<!-- ══════════════════════════════════════ -->
-<!-- SEE IT IN ACTION -->
-<!-- ══════════════════════════════════════ -->
-<section class="section" id="showcase">
-  <div class="container">
-    <h2 class="section-title">See It in Action</h2>
-    <p class="section-sub">The bayou doesn't wait. Neither should you.</p>
-
-    <div class="section-media">
-      <div class="video-showcase video-showcase-hero">
-        <video autoplay muted loop playsinline preload="none">
-          <source src="assets/video/boss-and-enemies.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="video-caption">Boss encounters &amp; enemy variety</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="veve-divider" aria-hidden="true"><span>⚜ ☩ ⚜</span></div>
 
 <!-- ══════════════════════════════════════ -->
 <!-- UNDER THE HOOD -->
@@ -446,22 +412,6 @@
     document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 80);
   });
 
-  /* Lazy-load videos on scroll (IntersectionObserver) */
-  var videos = document.querySelectorAll('video[preload="none"]');
-  if ('IntersectionObserver' in window && videos.length) {
-    var videoObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var video = entry.target;
-          video.preload = 'auto';
-          video.load();
-          video.play().catch(function() {});
-          videoObserver.unobserve(video);
-        }
-      });
-    }, { rootMargin: '200px 0px' });
-    videos.forEach(function(v) { videoObserver.observe(v); });
-  }
 })();
 </script>
 </body>
