@@ -77,9 +77,18 @@ em { color: var(--gold); }
   display: flex; align-items: center; justify-content: space-between; height: 100%;
 }
 .nav-brand {
-  font-family: var(--font-display); font-weight: 700; font-size: 1.2rem;
-  color: var(--gold) !important; letter-spacing: 0.15em;
+  color: var(--gold) !important;
+  display: flex;
+  align-items: center;
 }
+.nav-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+.nav-logo:hover { opacity: 1; }
 .nav-links {
   display: flex; list-style: none; gap: 0; align-items: center;
 }
@@ -105,7 +114,7 @@ em { color: var(--gold); }
   text-align: center; padding: 2rem;
   background:
     radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.75) 100%),
-    url('assets/img/hero-sizzle.jpeg') center/cover no-repeat;
+    url('assets/img/sizzle-with-baron.jpg') center/cover no-repeat;
   background-attachment: scroll;
 }
 .hero::before {
@@ -412,22 +421,54 @@ em { color: var(--gold); }
   max-width: 600px; margin: 2rem auto 0;
 }
 
-/* ─── Archetypes ─── */
-.archetype-grid {
-  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;
+/* ─── Archetype Playing Cards ─── */
+.archetype-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
-.archetype-card {
-  background: var(--dark-card); border: 1px solid var(--dark-border);
-  padding: 1.5rem; text-align: center;
-  transition: border-color 0.3s, transform 0.3s;
+.archetype-playing-card {
+  flex: 0 1 160px;
+  max-width: 180px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.archetype-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
-.archetype-card h4 {
-  font-family: var(--font-display); font-size: 0.9rem; color: var(--gold);
-  margin-bottom: 0.5rem; letter-spacing: 0.03em;
+.archetype-playing-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  z-index: 2;
 }
-.archetype-card p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
+.archetype-playing-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(201,168,76,0.15);
+  transition: box-shadow 0.4s ease;
+}
+.archetype-playing-card:hover img {
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.6),
+    0 0 20px rgba(201,168,76,0.2),
+    0 0 0 1px rgba(201,168,76,0.3);
+}
+.archetype-playing-card figcaption {
+  margin-top: 0.75rem;
+}
+.archetype-playing-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.03em;
+}
+.archetype-playing-card p {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
 .rada { color: var(--blue); }
 .petwo { color: var(--red); }
 
@@ -493,7 +534,13 @@ em { color: var(--gold); }
 @media (max-width: 1024px) {
   .feature-cards { grid-template-columns: 1fr; }
   .lwa-grid { grid-template-columns: 1fr; }
-  .archetype-grid { grid-template-columns: repeat(3, 1fr); }
+  .archetype-cards {
+    gap: 1rem;
+  }
+  .archetype-playing-card {
+    flex: 0 1 130px;
+    max-width: 150px;
+  }
   .threat-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -508,14 +555,26 @@ em { color: var(--gold); }
   }
   .nav-links.open { transform: translateX(0); }
   .nav-links li a { font-size: 0.85rem; padding: 0.75rem 0; display: block; border-bottom: 1px solid var(--dark-border); }
-  .archetype-grid { grid-template-columns: repeat(2, 1fr); }
+  .archetype-cards {
+    gap: 1rem;
+  }
+  .archetype-playing-card {
+    flex: 0 1 130px;
+    max-width: 150px;
+  }
   .baron-quote { padding: 1.2rem 1.5rem 1.2rem 2rem; }
   .media-pair { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 480px) {
-  .archetype-grid { grid-template-columns: 1fr; }
+  .archetype-cards {
+    gap: 0.75rem;
+  }
+  .archetype-playing-card {
+    flex: 0 1 110px;
+    max-width: 130px;
+  }
   .hero-title { font-size: 2rem; }
   .section-title { font-size: 1.6rem; }
   .gallery-grid { grid-template-columns: 1fr; }
