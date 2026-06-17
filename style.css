@@ -189,6 +189,39 @@ em { color: var(--gold); }
 /* ─── Sections ─── */
 .section { padding: var(--section-pad) 0; }
 .section-alt { background: var(--dark-alt); }
+
+/* ─── Section Backgrounds ─── */
+.section-bg {
+  position: relative;
+  background-color: var(--dark-alt);
+}
+.section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--section-bg) center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+.section-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--dark) 0%,
+    transparent 8%,
+    transparent 92%,
+    var(--dark) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+.section-bg > .container {
+  position: relative;
+  z-index: 1;
+}
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--gold);
@@ -423,15 +456,15 @@ em { color: var(--gold); }
 
 /* ─── Archetype Playing Cards ─── */
 .archetype-cards {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
   margin-bottom: 3rem;
-  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .archetype-playing-card {
-  flex: 0 1 160px;
-  max-width: 180px;
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -535,11 +568,8 @@ em { color: var(--gold); }
   .feature-cards { grid-template-columns: 1fr; }
   .lwa-grid { grid-template-columns: 1fr; }
   .archetype-cards {
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
-  }
-  .archetype-playing-card {
-    flex: 0 1 130px;
-    max-width: 150px;
   }
   .threat-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
@@ -556,11 +586,8 @@ em { color: var(--gold); }
   .nav-links.open { transform: translateX(0); }
   .nav-links li a { font-size: 0.85rem; padding: 0.75rem 0; display: block; border-bottom: 1px solid var(--dark-border); }
   .archetype-cards {
-    gap: 1rem;
-  }
-  .archetype-playing-card {
-    flex: 0 1 130px;
-    max-width: 150px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
   }
   .baron-quote { padding: 1.2rem 1.5rem 1.2rem 2rem; }
   .media-pair { grid-template-columns: 1fr; }
@@ -569,11 +596,8 @@ em { color: var(--gold); }
 
 @media (max-width: 480px) {
   .archetype-cards {
-    gap: 0.75rem;
-  }
-  .archetype-playing-card {
-    flex: 0 1 110px;
-    max-width: 130px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
   }
   .hero-title { font-size: 2rem; }
   .section-title { font-size: 1.6rem; }
