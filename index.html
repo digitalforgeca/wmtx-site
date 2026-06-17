@@ -1,149 +1,1037 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WMTX — Whispermen Tactical</title>
-  <meta name="description" content="Turn-based tactical combat in 1889 New Orleans. Squad-based, veve-powered, lwa-bound. A Whispermen: 1889 game by Digital Forge Studios.">
-  <meta property="og:title" content="WMTX — Whispermen Tactical">
-  <meta property="og:description" content="Turn-based tactical combat in 1889 New Orleans. Squad-based, veve-powered, lwa-bound.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wmtx.dforge.ca">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="WMTX — Whispermen Tactical">
-  <meta name="twitter:description" content="Turn-based tactical combat in 1889 New Orleans.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whispermen: 1889 Tactics — Turn-Based Occult Western Combat</title>
+<meta name="description" content="Turn-based squad combat in 1889 New Orleans. Veve-powered. Lwa-bound. Every spirit remembers. XCOM meets voodoo frontier.">
+<meta property="og:title" content="Whispermen: 1889 Tactics">
+<meta property="og:description" content="Turn-based squad combat in 1889 New Orleans. Veve-powered. Lwa-bound. Every spirit remembers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wmtx.dforge.ca">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grain"></div>
 
-  <header class="hero">
-    <div class="hero-content">
-      <p class="tagline-top"><a href="https://wm.dforge.ca" class="universe-link">Whispermen: 1889</a></p>
-      <h1 class="title">
-        <span class="title-main">WMTX</span>
-        <span class="title-sub">Whispermen Tactical</span>
-      </h1>
-      <p class="pitch">Turn-based squad combat in 1889 New Orleans.<br>Veve-powered. Lwa-bound. Every spirit remembers.</p>
-      <div class="divider">&#9766;</div>
+<!-- Film Grain Overlay -->
+<div class="film-grain" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<nav class="main-nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">WMTX</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">The Pitch</a></li>
+      <li><a href="#combat">Combat</a></li>
+      <li><a href="#veves">Veves</a></li>
+      <li><a href="#lwa">The Lwa</a></li>
+      <li><a href="#advancement">Advancement</a></li>
+      <li><a href="#enemies">Enemies</a></li>
+      <li><a href="#weapons">Arsenal</a></li>
+      <li><a href="#crossroads">Crossroads</a></li>
+      <li><a href="#baron">Baron</a></li>
+      <li><a href="#campaign">Campaign</a></li>
+      <li><a href="#multiplayer">Multiplayer</a></li>
+      <li><a href="#modding">Modding</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- HERO SECTION -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Whispermen<span class="hero-colon">:</span> <span class="hero-year">1889</span> Tactics</h1>
+    <p class="hero-tagline">Turn-based squad combat in 1889 New Orleans.<br>Veve-powered. Lwa-bound. <em>Every spirit remembers.</em></p>
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-primary">Descend Into the Bayou</a>
+      <a href="https://wm.dforge.ca" class="btn btn-ghost" target="_blank" rel="noopener">⚜ Universe Hub</a>
     </div>
-  </header>
+    <p class="hero-studio">A Digital Forge Studios Inc. Production</p>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>☩</span>
+  </div>
+</section>
 
-  <main>
-    <section class="section-dark" id="about">
-      <div class="container">
-        <h2>Command the Crossroads</h2>
-        <p>WMTX is a turn-based tactical game set in the Whispermen: 1889 universe. Lead a squad of voodoo gunslingers through the streets, bayous, and cemeteries of post-Reconstruction New Orleans. Position your Whispermen, draw veve to channel the lwa, and hold the line between the living and the dead.</p>
-        <p>Every unit carries a lwa bond that shapes their abilities and temperament. Every engagement changes the spiritual landscape. The spirits are watching, and they keep score.</p>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☦ ✦ ⚜ ✦ ☦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- THE PITCH -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="about">
+  <div class="container">
+    <h2 class="section-title">The Pitch</h2>
+    <p class="section-subtitle">XCOM meets voodoo frontier</p>
+    <div class="pitch-grid">
+      <div class="pitch-main">
+        <p class="pitch-lead">Command a squad of supernatural investigators through turn-based tactical missions on the Louisiana frontier. Draw sacred veves for battlefield power. Manage herbs, silver, and spirit. Listen to Baron Samedi tell you how badly you're doing.</p>
+        <p>The year is 1889. Eight years since Marie Laveau's death. The boundary between the living and the dead is eroding — and something is pushing through from the other side.</p>
+        <p>You lead a ragtag squad of mortals touched by the lwa — voodoo spirits who grant power in exchange for service. Every mission takes you deeper into the bayou, closer to the crossroads, and further from anything resembling safety.</p>
+        <p>This is not a game about conquering the supernatural. It's about <em>surviving</em> it.</p>
       </div>
-    </section>
-
-    <section class="section-accent" id="combat">
-      <div class="container">
-        <h2>Tactical Combat</h2>
-        <div class="feature-list">
-          <div class="feature">
-            <h4>Squad Deployment</h4>
-            <p>Build your squad from five archetypes, each aligned to different lwa and nanchon. Balance Rada stability with Petwo aggression. Position matters: flanking, cover, elevation, and spiritual terrain all affect outcomes.</p>
-          </div>
-          <div class="feature">
-            <h4>Veve Actions</h4>
-            <p>Draw sacred veve to invoke your patron lwa mid-combat. Each veve is a tactical decision: area denial, healing zones, spirit summons, or raw offensive power. Stronger veve cost more Communion.</p>
-          </div>
-          <div class="feature">
-            <h4>Lwa Bond System</h4>
-            <p>Your squad members develop deepening bonds with their patron spirits. Higher bond means stronger abilities, but the lwa's personality bleeds through. A unit deep in Baron Criminel's service hits harder but becomes unpredictable.</p>
-          </div>
-          <div class="feature">
-            <h4>Spiritual Terrain</h4>
-            <p>The battlefield isn't just physical. Wards, crossroads, sacred ground, and corrupted zones affect spirit abilities. A cemetery at midnight plays different from a cathedral at noon.</p>
-          </div>
+      <div class="pitch-features">
+        <div class="pitch-card">
+          <span class="pitch-icon">⚔</span>
+          <h3>Tactical Depth</h3>
+          <p>Gridless 3D combat with raycast cover, destructible terrain, and continuous elevation. No tiles. No shortcuts.</p>
+        </div>
+        <div class="pitch-card">
+          <span class="pitch-icon">✦</span>
+          <h3>Veve Magic</h3>
+          <p>Draw sacred geometric symbols mid-combat to invoke the lwa. Each veve costs AP, spirit, and herbs — and persists on the battlefield.</p>
+        </div>
+        <div class="pitch-card">
+          <span class="pitch-icon">☠</span>
+          <h3>Baron's Commentary</h3>
+          <p>The Loa of Death watches every battle. His sardonic commentary reacts to your triumphs and disasters in real time.</p>
+        </div>
+        <div class="pitch-card">
+          <span class="pitch-icon">⚜</span>
+          <h3>60 Build Combos</h3>
+          <p>5 archetypes × 6 lwa × 2 temperaments. Every squad member plays differently. No two runs are the same.</p>
         </div>
       </div>
-    </section>
-
-    <section class="section-dark" id="squad">
-      <div class="container">
-        <h2>The Five Archetypes</h2>
-        <div class="attr-grid">
-          <div class="attr">
-            <span class="attr-name">Gunhand</span>
-            <span class="attr-align">Petwo-Aligned</span>
-            <p>Frontline firepower. Revolver specialists who channel hot spirits for devastating close-range combat.</p>
-          </div>
-          <div class="attr">
-            <span class="attr-name">Rootworker</span>
-            <span class="attr-align">Rada-Aligned</span>
-            <p>Support and healing. Gris-gris crafters who maintain the squad's spiritual health and lay protective wards.</p>
-          </div>
-          <div class="attr">
-            <span class="attr-name">Crossroads</span>
-            <span class="attr-align">Gede-Aligned</span>
-            <p>Scouts and seers. They read the spiritual terrain, reveal hidden threats, and commune with the recently dead.</p>
-          </div>
-          <div class="attr">
-            <span class="attr-name">Houngan</span>
-            <span class="attr-align">Multi-Nanchon</span>
-            <p>Veve specialists. They draw the most complex patterns and channel multiple lwa, but burn Communion fast.</p>
-          </div>
-          <div class="attr">
-            <span class="attr-name">Mambo</span>
-            <span class="attr-align">Multi-Nanchon</span>
-            <p>Field commanders. They boost squad cohesion, coordinate lwa bonds across the team, and hold the thread under pressure.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-accent" id="missions">
-      <div class="container">
-        <h2>New Orleans, 1889</h2>
-        <p>Eight years after Marie Laveau's death. The French Quarter, the bayou, the cemeteries, Congo Square, the docks. Each district has its own spiritual character, its own hostile spirits, its own history.</p>
-        <p>Missions aren't just combat encounters. You'll investigate disturbances, negotiate with spirits, protect the living, and unravel what's causing the boundary to erode. The tactical layer sits on top of a world that's alive with consequence.</p>
-      </div>
-    </section>
-
-    <section class="section-dark" id="details">
-      <div class="container">
-        <h2>Details</h2>
-        <div class="detail-grid">
-          <div class="detail">
-            <span class="detail-label">Engine</span>
-            <span class="detail-value">Godot 4</span>
-          </div>
-          <div class="detail">
-            <span class="detail-label">Genre</span>
-            <span class="detail-value">Turn-Based Tactical</span>
-          </div>
-          <div class="detail">
-            <span class="detail-label">Setting</span>
-            <span class="detail-value">1889 New Orleans</span>
-          </div>
-          <div class="detail">
-            <span class="detail-label">Platform</span>
-            <span class="detail-value">PC (Steam) + Android</span>
-          </div>
-          <div class="detail">
-            <span class="detail-label">Studio</span>
-            <span class="detail-value"><a href="https://dforge.ca">Digital Forge Studios</a></span>
-          </div>
-          <div class="detail">
-            <span class="detail-label">Universe</span>
-            <span class="detail-value"><a href="https://wm.dforge.ca">Whispermen: 1889</a></span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p class="footer-text">&copy; 2026 Digital Forge Studios Inc. &bull; <a href="https://wm.dforge.ca">Whispermen: 1889</a></p>
-      <p class="footer-sub">Every spirit remembers.</p>
     </div>
-  </footer>
+    <blockquote class="baron-quote">
+      <p>"You think sending four mortals against a graveyard full of the dead is a good plan? ...I love it."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>✦ ☩ ✦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- COMBAT SYSTEM -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-accent" id="combat">
+  <div class="container">
+    <h2 class="section-title">Combat System</h2>
+    <p class="section-subtitle">Every angle matters. Every bullet counts.</p>
+
+    <div class="combat-grid">
+      <div class="combat-card">
+        <h3>⬡ Gridless Tactical Combat</h3>
+        <p>No grid. No tiles. Continuous 3D space on Terrain3D geometry. Ruler-based movement with NavMesh pathfinding. Movement radius rings show your reachable area in real time. Terrain type multipliers change the cost of every step — bayou water costs 2× movement, roads only 0.75×.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>◎ Raycast Cover System</h3>
+        <p>Forget binary half/full cover. WMTX calculates cover as a <strong>percentage</strong> by casting 16 rays from attacker to target body volume. A fence with gaps, a tree trunk, a crumbled wall — each provides different coverage depending on your exact angle of approach. Move two feet to the left and the math changes entirely.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>💥 Destructible Cover</h3>
+        <p>Geometry takes damage and breaks. That stone wall protecting your herbalist? A few shotgun blasts will reduce it to rubble — and your cover percentages update dynamically as the battlefield transforms around you.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>⛰ Continuous Elevation</h3>
+        <p>No discrete levels. The heightmap is continuous — a gentle slope gives you a slight advantage, a church bell tower gives you a commanding one. Height advantage improves hit chance naturally through raycast geometry. Physics, not abstractions.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>⚡ Action Points</h3>
+        <p>Each unit has AP per turn. Move, attack, draw a veve, set overwatch, reload, use items — everything costs AP. Spend wisely. A unit that blows all AP on movement is defenseless. A unit that conserves AP can overwatch and punish enemy movement.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>👁 Overwatch &amp; Reaction Fire</h3>
+        <p>Reserve AP and set a watch arc. When enemies move through your cone of fire, automatic reaction shots trigger. Stack multiple overwatches to create kill corridors. But beware — enemies can overwatch too.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>⚔ Engagement Zones</h3>
+        <p>Melee enemies create threat zones around themselves. Walking out of an engagement zone costs AP — and provokes a free attack. Positioning isn't just about cover; it's about controlling who can move where.</p>
+      </div>
+
+      <div class="combat-card">
+        <h3>🎬 Action Camera</h3>
+        <p>Cinematic over-the-shoulder camera sequences for attacks and critical moments. XCOM-style dramatic shots that make every kill feel weighty and every miss feel devastating. The bayou has never looked this dangerous.</p>
+      </div>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"Ah, you moved your gunslinger into the open. Bold. Stupid, but bold. Let's see if the zombies appreciate your bravery."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>⚜ ☦ ⚜</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- THE VEVE SYSTEM -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="veves">
+  <div class="container">
+    <h2 class="section-title">The Veve System</h2>
+    <p class="section-subtitle">Sacred geometry. Drawn in blood and bayou dust.</p>
+
+    <div class="veve-intro">
+      <p>Veves are sacred geometric symbols drawn to invoke specific lwa mid-combat. Each veve is an investment of <strong>Action Points</strong>, <strong>Spirit</strong>, and <strong>herbs</strong> — and once drawn, they persist on the battlefield for multiple turns as powerful area effects.</p>
+      <p>But power has a price. Taking damage while drawing can cause the veve to fail — or worse, <em>backfire</em>. Enemy practitioners can draw counter-veves. And overlapping veve radii create compound effects that change the rules of engagement entirely.</p>
+    </div>
+
+    <h3 class="subsection-title">The Six Veves</h3>
+    <div class="veve-grid">
+      <div class="veve-card" style="--veve-color: #D4440A">
+        <div class="veve-symbol">🔥</div>
+        <h4>Ogoun's Fire</h4>
+        <p class="veve-type">Fire AoE Damage</p>
+        <p>Scorches a battlefield zone with divine fire. Enemies in the radius take burn damage each turn. Pairs devastatingly with Marinette's Thorns.</p>
+      </div>
+      <div class="veve-card" style="--veve-color: #4A90D9">
+        <div class="veve-symbol">💧</div>
+        <h4>Erzulie's Grace</h4>
+        <p class="veve-type">Healing Zone</p>
+        <p>A sanctuary of restorative energy. Allies within the radius heal over time. The only reliable way to recover mid-mission without consumables.</p>
+      </div>
+      <div class="veve-card" style="--veve-color: #C9A84C">
+        <div class="veve-symbol">🚪</div>
+        <h4>Legba's Gateway</h4>
+        <p class="veve-type">Movement Boost</p>
+        <p>Opens pathways between spaces. Allies in the zone gain bonus movement AP and can traverse difficult terrain at normal cost.</p>
+      </div>
+      <div class="veve-card" style="--veve-color: #7B2D8E">
+        <div class="veve-symbol">👤</div>
+        <h4>Baron's Shadow</h4>
+        <p class="veve-type">Accuracy Debuff</p>
+        <p>Shrouds the area in death's shadow. Enemies within suffer severe accuracy penalties. Stack with cover for near-untouchable positions.</p>
+      </div>
+      <div class="veve-card" style="--veve-color: #E8E8E8">
+        <div class="veve-symbol">🐍</div>
+        <h4>Damballah's Ward</h4>
+        <p class="veve-type">Armor Zone</p>
+        <p>The Great Serpent's protection manifests as a shimmering ward. Allies in the zone gain temporary armor that absorbs incoming damage.</p>
+      </div>
+      <div class="veve-card" style="--veve-color: #FF4500">
+        <div class="veve-symbol">🌿</div>
+        <h4>Marinette's Thorns</h4>
+        <p class="veve-type">Heavy Fire Damage + Friendly Fire</p>
+        <p>Unleashes wild, uncontrolled fire damage in a wide radius. Devastating — but doesn't discriminate. Your units caught inside <em>will</em> burn. Use with extreme caution.</p>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">Veve Mechanics</h3>
+    <div class="mechanics-grid">
+      <div class="mechanic-item">
+        <h4>Persistence</h4>
+        <p>Drawn veves stay on the battlefield for multiple turns, creating lasting area effects that shape the flow of combat.</p>
+      </div>
+      <div class="mechanic-item">
+        <h4>Combo Effects</h4>
+        <p>Overlapping veve radii create compound effects. Fire + Water = steam and obscurement. Ward + Gateway = fortified advance lanes.</p>
+      </div>
+      <div class="mechanic-item">
+        <h4>Counter-Veves</h4>
+        <p>Enemy practitioners can draw their own veves — turning your sanctuary into a contested zone or neutralizing your effects entirely.</p>
+      </div>
+      <div class="mechanic-item">
+        <h4>Disruption Risk</h4>
+        <p>Taking damage while drawing a veve can cause it to fail or backfire. Protect your caster — or pay the price.</p>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">Required Herbs</h3>
+    <div class="herb-list">
+      <span class="herb-tag">Basil</span>
+      <span class="herb-tag">Rue</span>
+      <span class="herb-tag">Sage</span>
+      <span class="herb-tag">Graveyard Dust</span>
+      <span class="herb-tag">Bayou Moss</span>
+      <span class="herb-tag">Crossroads Dirt</span>
+      <span class="herb-tag">Blood Orchid</span>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"Drawing a veve in the middle of a firefight. Either you're devoted or deranged. With mortals, it's usually both."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☩ ⚜ ☩</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- THE SIX LWA -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-accent" id="lwa">
+  <div class="container">
+    <h2 class="section-title">The Six Lwa</h2>
+    <p class="section-subtitle">Patron spirits of the crossroads. Choose wisely — they choose back.</p>
+    <p class="lwa-intro">Each squad member bonds with a patron lwa — a voodoo spirit who grants supernatural abilities in exchange for devotion. Your lwa shapes your playstyle, your talent tree, and the very nature of your power. The spirits are not tools. They are partners. And they have opinions.</p>
+
+    <div class="lwa-grid">
+      <!-- Baron Samedi -->
+      <div class="lwa-card" style="--lwa-color: #7B2D8E">
+        <div class="lwa-header">
+          <div class="lwa-color-bar"></div>
+          <h3 class="lwa-name">Baron Samedi</h3>
+          <p class="lwa-title">Loa of Death, Passage &amp; The Grave</p>
+        </div>
+        <div class="lwa-body">
+          <div class="lwa-meta">
+            <span class="lwa-element">☠ Death</span>
+            <span class="lwa-color-name" style="color: #7B2D8E">■ Purple</span>
+          </div>
+          <p class="lwa-desc">The Lord of the Dead doesn't just flirt with mortality — he weaponizes it. Baron-bonded units thrive on the edge of death, harvesting spirit from the fallen and bargaining with forces that would destroy lesser minds. Dark bargains, death triggers, and an unnerving survivability.</p>
+          <h4>Playstyle: Spirit Economy &amp; Death Triggers</h4>
+          <div class="ability-list">
+            <div class="ability">
+              <strong>Death's Doorstep</strong>
+              <p>Survive a fatal blow at 1 HP. Once per mission. Death has to wait.</p>
+            </div>
+            <div class="ability">
+              <strong>Gravedigger's Toll</strong>
+              <p>Mark an enemy — when they die, harvest bonus spirit from their passage.</p>
+            </div>
+            <div class="ability">
+              <strong>Gallows Humor</strong>
+              <p>Gain dodge bonus when at low HP. The closer to death, the harder to hit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ogoun -->
+      <div class="lwa-card" style="--lwa-color: #D4440A">
+        <div class="lwa-header">
+          <div class="lwa-color-bar"></div>
+          <h3 class="lwa-name">Ogoun</h3>
+          <p class="lwa-title">Loa of War, Iron &amp; Fire</p>
+        </div>
+        <div class="lwa-body">
+          <div class="lwa-meta">
+            <span class="lwa-element">🔥 Fire</span>
+            <span class="lwa-color-name" style="color: #D4440A">■ Crimson</span>
+          </div>
+          <p class="lwa-desc">The Iron Warrior. Ogoun-bonded units are frontline combatants who get tougher as the battle wears on. They armor up when wounded, inspire allies with war cries, and turn the forge of combat into raw power. When the bullets fly, Ogoun's children walk forward.</p>
+          <h4>Playstyle: Frontline Combat &amp; Armor</h4>
+          <div class="ability-list">
+            <div class="ability">
+              <strong>Iron Skin</strong>
+              <p>Gain temporary armor when wounded. Pain makes you stronger.</p>
+            </div>
+            <div class="ability">
+              <strong>War Cry</strong>
+              <p>Buff all allies' aim within hearing range. Iron sharpens iron.</p>
+            </div>
+            <div class="ability">
+              <strong>Iron Will</strong>
+              <p>Build spirit reserves through sustained combat. The longer the fight, the deeper the well.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Erzulie -->
+      <div class="lwa-card" style="--lwa-color: #4A90D9">
+        <div class="lwa-header">
+          <div class="lwa-color-bar"></div>
+          <h3 class="lwa-name">Erzulie</h3>
+          <p class="lwa-title">Loa of Love, Grace &amp; Water</p>
+        </div>
+        <div class="lwa-body">
+          <div class="lwa-meta">
+            <span class="lwa-element">💧 Water</span>
+            <span class="lwa-color-name" style="color: #4A90D9">■ Azure</span>
+          </div>
+          <p class="lwa-desc">Grace under fire. Erzulie-bonded units are the heart of any squad — healers, protectors, and surprisingly dangerous when their allies are threatened. They move through danger with preternatural elegance and mend what the bayou breaks.</p>
+          <h4>Playstyle: Healing &amp; Protective Retaliation</h4>
+          <div class="ability-list">
+            <div class="ability">
+              <strong>Graceful Step</strong>
+              <p>Evade overwatch fire on first move each turn. Grace is its own armor.</p>
+            </div>
+            <div class="ability">
+              <strong>Soothing Touch</strong>
+              <p>Heal an adjacent ally for a moderate amount. Costs AP, not consumables.</p>
+            </div>
+            <div class="ability">
+              <strong>Water Affinity</strong>
+              <p>Draw water-element veves at reduced spirit cost. The river flows through you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legba -->
+      <div class="lwa-card" style="--lwa-color: #C9A84C">
+        <div class="lwa-header">
+          <div class="lwa-color-bar"></div>
+          <h3 class="lwa-name">Legba</h3>
+          <p class="lwa-title">Loa of Crossroads, Pathways &amp; Spirit</p>
+        </div>
+        <div class="lwa-body">
+          <div class="lwa-meta">
+            <span class="lwa-element">✦ Spirit</span>
+            <span class="lwa-color-name" style="color: #C9A84C">■ Gold</span>
+          </div>
+          <p class="lwa-desc">The Gatekeeper. Legba-bonded units control the flow of battle itself — opening paths that shouldn't exist, seeing enemies before they're visible, and bending the action economy to breaking point. If Ogoun wins fights, Legba decides which fights happen.</p>
+          <h4>Playstyle: Mobility &amp; Action Economy</h4>
+          <div class="ability-list">
+            <div class="ability">
+              <strong>Pathfinder</strong>
+              <p>Gain extra AP on the first turn of combat. First mover advantage — the crossroads favor the bold.</p>
+            </div>
+            <div class="ability">
+              <strong>Crossroads Sense</strong>
+              <p>Extended vision range. See further, react sooner, ambush effectively.</p>
+            </div>
+            <div class="ability">
+              <strong>Spirit Walk</strong>
+              <p>Teleport to a visible position within range. The crossroads are everywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Damballah -->
+      <div class="lwa-card" style="--lwa-color: #E8E8E8">
+        <div class="lwa-header">
+          <div class="lwa-color-bar"></div>
+          <h3 class="lwa-name">Damballah</h3>
+          <p class="lwa-title">Loa of Wisdom, Protection &amp; The Serpent</p>
+        </div>
+        <div class="lwa-body">
+          <div class="lwa-meta">
+            <span class="lwa-element">🐍 Serpent</span>
+            <span class="lwa-color-name" style="color: #E8E8E8">■ Silver</span>
+          </div>
+          <p class="lwa-desc">The Ancient Serpent. Damballah-bonded units are patient, precise, and devastatingly effective when properly positioned. They reward staying still, thinking ahead, and turning defense into an art form. Where others rush, the serpent waits.</p>
+          <h4>Playstyle: Overwatch &amp; Patient Precision</h4>
+          <div class="ability-list">
+            <div class="ability">
+              <strong>Serpent's Patience</strong>
+              <p>Gain accuracy bonus when you haven't moved this turn. Stillness is power.</p>
+            </div>
+            <div class="ability">
+              <strong>Coil Ward</strong>
+              <p>Shield an adjacent ally, redirecting a portion of incoming damage to yourself.</p>
+            </div>
+            <div class="ability">
+              <strong>Ancient Wisdom</strong>
+              <p>Chance to double the effect of drawn veves. The old knowledge flows deep.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marinette -->
+      <div class="lwa-card" style="--lwa-color: #FF4500">
+        <div class="lwa-header">
+          <div class="lwa-color-bar"></div>
+          <h3 class="lwa-name">Marinette</h3>
+          <p class="lwa-title">Loa of Ferocity, Freedom &amp; Fire</p>
+        </div>
+        <div class="lwa-body">
+          <div class="lwa-meta">
+            <span class="lwa-element">🔥 Fire</span>
+            <span class="lwa-color-name" style="color: #FF4500">■ Blaze</span>
+          </div>
+          <p class="lwa-desc">The Wild One. Marinette-bonded units are barely controlled chaos — highest damage, highest risk, highest reward. They move first, hit hardest, and set everything on fire. Including, occasionally, your own squad. She doesn't care. Freedom has a cost.</p>
+          <h4>Playstyle: Aggressive Fire &amp; Scorched Earth</h4>
+          <div class="ability-list">
+            <div class="ability">
+              <strong>Feral Instinct</strong>
+              <p>High initiative — always acts early in the turn order. The wild strike first.</p>
+            </div>
+            <div class="ability">
+              <strong>Savage Charge</strong>
+              <p>Rush toward an enemy and gain a free melee attack. Close the gap, deliver the violence.</p>
+            </div>
+            <div class="ability">
+              <strong>Wild Fire</strong>
+              <p>Boosted fire veve effects. When Marinette's children draw fire, it burns hotter and wider.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"Six spirits, six paths, six ways to die beautifully. Choose your patron carefully — or don't. It's funnier when you don't."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>✦ ⚜ ✦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ADVANCEMENT SYSTEM -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="advancement">
+  <div class="container">
+    <h2 class="section-title">Advancement System</h2>
+    <p class="section-subtitle">Two axes. Sixty combinations. No two squads alike.</p>
+
+    <div class="advancement-intro">
+      <p>Every squad member advances along <strong>two axes</strong>: their <strong>Archetype</strong> (mortal profession) and their <strong>Lwa</strong> (spiritual patron). 5 archetypes × 6 lwa × 2 temperaments = <strong>60 unique build combinations</strong>. And that's before you start making talent choices.</p>
+    </div>
+
+    <div class="temperament-grid">
+      <div class="temperament-card temperament-rada">
+        <h3>☽ Rada Path</h3>
+        <p class="temperament-desc">Cool. Measured. Defensive.</p>
+        <p>The Rada temperament emphasizes patience, protection, and precision. Rada abilities tend toward defensive buffs, sustained healing, accuracy bonuses, and controlled area effects. Same lwa — completely different playstyle. The Rada path asks: how long can you endure?</p>
+      </div>
+      <div class="temperament-card temperament-petwo">
+        <h3>☀ Petwo Path</h3>
+        <p class="temperament-desc">Hot. Fierce. Aggressive.</p>
+        <p>The Petwo temperament is fire and fury — aggressive action economy, burst damage, risk-reward abilities, and scorched-earth tactics. Same lwa, but Petwo burns brighter and faster. The Petwo path asks: can you end it before it ends you?</p>
+      </div>
+    </div>
+
+    <div class="talent-info">
+      <h3>Tiered Talent Trees</h3>
+      <p>At each tier, pick 2 of 3 available talents. You can't have everything — every build has deliberate gaps. This creates meaningful choices where specialization matters and no single unit can do it all. The system is fully declarative and data-driven: all effects defined in JSON, fully moddable.</p>
+    </div>
+
+    <h3 class="subsection-title">The Five Archetypes</h3>
+    <div class="archetype-grid" id="archetypes">
+      <div class="archetype-card">
+        <div class="archetype-icon">🎯</div>
+        <h4>Gunslinger</h4>
+        <p class="archetype-role">Ranged Specialist</p>
+        <p>Accuracy and crit growth. The sharpshooter. Gunslingers excel at precision fire from optimal range, scoring critical hits that can turn a battle. Their damage scales with patience and positioning.</p>
+      </div>
+      <div class="archetype-card">
+        <div class="archetype-icon">🌿</div>
+        <h4>Herbalist</h4>
+        <p class="archetype-role">Spirit-Focused Support</p>
+        <p>High max spirit and regen. The veve specialist. Herbalists keep the squad alive and empowered, drawing veves at reduced cost and maintaining spirit reserves that would exhaust any other archetype.</p>
+      </div>
+      <div class="archetype-card">
+        <div class="archetype-icon">✦</div>
+        <h4>Ritualist</h4>
+        <p class="archetype-role">Pure Caster</p>
+        <p>Highest spirit pool and regen in the game. The master of the veve arts. Ritualists can chain multiple veves per mission, maintain overlapping effects, and push the boundaries of what the lwa will grant.</p>
+      </div>
+      <div class="archetype-card">
+        <div class="archetype-icon">👊</div>
+        <h4>Brawler</h4>
+        <p class="archetype-role">Frontline Tank</p>
+        <p>HP and armor growth. The melee damage powerhouse. Brawlers close the distance and make enemies regret it. Their engagement zones lock down threats, and they get tougher with every scar.</p>
+      </div>
+      <div class="archetype-card">
+        <div class="archetype-icon">💨</div>
+        <h4>Scout</h4>
+        <p class="archetype-role">Mobile Flanker</p>
+        <p>Dodge and initiative growth. Extra AP at higher levels. Scouts dart through the battlefield, flanking enemies, spotting threats, and creating opportunities for the rest of the squad to exploit.</p>
+      </div>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"A Petwo Brawler bonded to Marinette. You've created a walking inferno with fists. I approve — from a safe distance."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☦ ✦ ☦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ENEMY TYPES -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-accent" id="enemies">
+  <div class="container">
+    <h2 class="section-title">The Threats</h2>
+    <p class="section-subtitle">The bayou doesn't send warnings. It sends teeth.</p>
+
+    <div class="enemy-grid">
+      <div class="enemy-card">
+        <div class="enemy-icon">🧟</div>
+        <h3>Zombies</h3>
+        <p class="enemy-type">Undead — Melee Swarm</p>
+        <p>Slow. Tough. Relentless. They come in numbers, absorbing fire and closing distance with mindless determination. One zombie is a nuisance. Eight zombies surrounding your squad is a crisis.</p>
+      </div>
+
+      <div class="enemy-card enemy-elite">
+        <div class="enemy-icon">🧟‍♂️</div>
+        <h3>3-Head Zombie</h3>
+        <p class="enemy-type">Undead — Mini-Boss</p>
+        <p>45 HP. Armored. Multi-attack with a massive threat radius. Three heads means three sets of teeth and three chances to ruin your positioning. Prioritize or suffer.</p>
+      </div>
+
+      <div class="enemy-card">
+        <div class="enemy-icon">🤠</div>
+        <h3>Hostile Cowboys</h3>
+        <p class="enemy-type">Human — Ranged Combatants</p>
+        <p>They use cover intelligently. They flank. They overwatch. These aren't shambling undead — they're trained killers with six-shooters and bad intentions. Respect them or die.</p>
+      </div>
+
+      <div class="enemy-card enemy-elite">
+        <div class="enemy-icon">💀</div>
+        <h3>Brutes</h3>
+        <p class="enemy-type">Heavy — Armored Area Denial</p>
+        <p>Massive HP pools. Heavy armor. Devastating melee damage. Brutes don't chase — they hold ground, creating zones of death that force you to find another way around.</p>
+      </div>
+
+      <div class="enemy-card enemy-elite">
+        <div class="enemy-icon">🔮</div>
+        <h3>Hostile Practitioners</h3>
+        <p class="enemy-type">Caster — Enemy Veve Users</p>
+        <p>High initiative. They draw counter-veves that neutralize your effects or create hostile zones. The highest priority target on any battlefield — kill them first, or fight on their terms.</p>
+      </div>
+
+      <div class="enemy-card">
+        <div class="enemy-icon">🦇</div>
+        <h3>Bats &amp; Insects</h3>
+        <p class="enemy-type">Swarm — Cloud Area Denial</p>
+        <p>Swarm entities that create clouds of biting, clawing chaos. They don't hit hard individually, but they obscure vision, reduce accuracy, and make you miserable.</p>
+      </div>
+
+      <div class="enemy-card enemy-elite">
+        <div class="enemy-icon">🧛</div>
+        <h3>Vampires (Garkain)</h3>
+        <p class="enemy-type">Undead — Fast Flankers</p>
+        <p>Terrifyingly fast. They close distance before you can react, bypassing your front line to strike at vulnerable units. Vulnerable to silver — if you remembered to bring it.</p>
+      </div>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"The Garkain are hungry tonight. I'd recommend silver bullets — but watching you figure that out the hard way is more entertaining."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>⚜ ☩ ⚜</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- WEAPONS & EQUIPMENT -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="weapons">
+  <div class="container">
+    <h2 class="section-title">The Arsenal</h2>
+    <p class="section-subtitle">Silver, steel, and sanctified edge.</p>
+
+    <div class="arsenal-category">
+      <h3 class="subsection-title">Weapons</h3>
+      <div class="weapon-grid">
+        <div class="weapon-card">
+          <h4>Revolver</h4>
+          <p class="weapon-type">Standard Sidearm</p>
+          <p>The workhorse six-shooter. Reliable, accurate at medium range, and quick to draw. Every squad member starts with one. What you do with it is your business.</p>
+        </div>
+        <div class="weapon-card">
+          <h4>Silver Revolver</h4>
+          <p class="weapon-type">Anti-Undead Sidearm</p>
+          <p>Blessed silver chambers. Bonus damage against undead targets. When the dead walk, silver speaks the only language they understand.</p>
+        </div>
+        <div class="weapon-card">
+          <h4>Sawed-Off Shotgun</h4>
+          <p class="weapon-type">Close Range Devastation</p>
+          <p>Devastating at close range. The spread pattern means you don't need perfect aim — just proximity and nerve. Two barrels. Two chances to make an impression.</p>
+        </div>
+        <div class="weapon-card">
+          <h4>Hunting Rifle</h4>
+          <p class="weapon-type">Long Range Precision</p>
+          <p>For when the target is far away and needs to stop breathing. High accuracy at range, slow rate of fire. A patient weapon for patient operators.</p>
+        </div>
+        <div class="weapon-card">
+          <h4>Machete</h4>
+          <p class="weapon-type">Melee — Standard</p>
+          <p>Crude, effective, and always ready. No reload, no ammo, no excuses. For brawlers and scouts who prefer their violence personal.</p>
+        </div>
+        <div class="weapon-card">
+          <h4>Blessed Blade</h4>
+          <p class="weapon-type">Melee — Consecrated</p>
+          <p>A blade touched by the lwa. Burns undead on contact. The most feared melee weapon in the bayou — if you can get close enough to use it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="arsenal-category">
+      <h3 class="subsection-title">Ammunition</h3>
+      <div class="ammo-grid">
+        <div class="ammo-item">
+          <h4>Standard Rounds</h4>
+          <p>Reliable lead. Gets the job done against anything that bleeds — or used to.</p>
+        </div>
+        <div class="ammo-item">
+          <h4>Silver Rounds</h4>
+          <p>Blessed silver ammunition. Bonus damage against undead. Expensive, limited, essential.</p>
+        </div>
+        <div class="ammo-item">
+          <h4>Buckshot</h4>
+          <p>Spread pattern for shotguns. Hits harder up close, loses potency at range. Area saturation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="arsenal-dual">
+      <div class="arsenal-category">
+        <h3 class="subsection-title">Gear</h3>
+        <div class="gear-list">
+          <div class="gear-item"><strong>Bandolier</strong> — Extra ammo capacity and faster reloads</div>
+          <div class="gear-item"><strong>Spirit Charm</strong> — Bonus spirit regeneration per turn</div>
+          <div class="gear-item"><strong>Herb Pouch</strong> — Carry additional herb supplies for veve drawing</div>
+        </div>
+      </div>
+      <div class="arsenal-category">
+        <h3 class="subsection-title">Consumables</h3>
+        <div class="gear-list">
+          <div class="gear-item"><strong>Healing Poultice</strong> — Immediate HP restoration. One use.</div>
+          <div class="gear-item"><strong>Spirit Tonic</strong> — Restore spirit mid-combat. Bitter, effective.</div>
+          <div class="gear-item"><strong>Smoke Bomb</strong> — Create concealment cloud. Break line of sight.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☦ ⚜ ☦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- THE CROSSROADS (BASE) -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-accent" id="crossroads">
+  <div class="container">
+    <h2 class="section-title">The Crossroads</h2>
+    <p class="section-subtitle">Your settlement. Your sanctuary. Your staging ground.</p>
+
+    <div class="crossroads-intro">
+      <p>The Crossroads isn't a menu — it's a <strong>living, growing 3D settlement</strong>. Buildings appear as you unlock them. NPCs wander the streets. The town evolves with your progress, growing from a handful of shacks into a fortified frontier outpost.</p>
+    </div>
+
+    <div class="crossroads-grid">
+      <div class="crossroads-card">
+        <h3>📋 Missions Board</h3>
+        <p>Choose your next deployment from available missions. Story missions advance the campaign; side missions provide resources, intel, and squad experience. Every choice shapes what comes next.</p>
+      </div>
+      <div class="crossroads-card">
+        <h3>🏪 Vendor</h3>
+        <p>Buy weapons, ammo, herbs, gear, and consumables. Stock refreshes between missions. Silver currency earned from missions and salvage. Invest wisely — the bayou doesn't do refunds.</p>
+      </div>
+      <div class="crossroads-card">
+        <h3>👥 Squad Management</h3>
+        <p>Heal wounded squad members. Equip gear and weapons. Level up and choose talents. Assign lwa bonds. Review stats and build paths. Your squad is only as strong as your preparation.</p>
+      </div>
+      <div class="crossroads-card">
+        <h3>💀 Baron's Corner</h3>
+        <p>Baron Samedi holds court. Receive cryptic advice, commentary on recent missions, and occasionally useful information buried under layers of sarcasm. He's helpful. In his way.</p>
+      </div>
+      <div class="crossroads-card">
+        <h3>⚗ Crafting</h3>
+        <p>Combine herbs into veve components, craft blessed ammunition, create warding charms. Recipes unlock as you progress. The difference between a prepared squad and a dead one is what you craft before the mission.</p>
+      </div>
+      <div class="crossroads-card">
+        <h3>🏗 Facility Upgrades</h3>
+        <p>Build and upgrade facilities to unlock new crafting recipes, vendor stock, training options, and settlement capabilities. The Crossroads grows with you — invest in its future.</p>
+      </div>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"Welcome back to the Crossroads. I see you brought everyone home this time. Don't get used to that feeling."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☩ ✦ ☩</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- BARON SAMEDI — THE HOST -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark section-baron" id="baron">
+  <div class="container">
+    <h2 class="section-title">Baron Samedi — The Host</h2>
+    <p class="section-subtitle">The Loa of Death is watching. And he has notes.</p>
+
+    <div class="baron-feature">
+      <div class="baron-desc">
+        <p class="baron-lead">Baron Samedi isn't just a lwa patron — he's the <strong>AI Director</strong>, recontextualized from the Whispermen FPS as your sardonic, theatrical, omniscient tactical commentator.</p>
+        <p>He watches every battle. He reacts to every decision. First blood, flanking kills, multi-kills, clutch moments, squad wipes — Baron has something to say about all of it. His mood shifts with the battle's momentum, and his commentary is context-aware with template variables that reference specific units, enemies, and situations.</p>
+        <p>A priority system ensures critical story moments always take precedence over ambient commentary, but during the quiet stretches between the chaos, Baron fills the silence with observations that are equal parts amusing, unsettling, and occasionally helpful.</p>
+      </div>
+      <div class="baron-quotes-showcase">
+        <div class="baron-quote-card">
+          <p>"First blood! And it's yours! Oh, this is going to be a <em>wonderful</em> evening."</p>
+        </div>
+        <div class="baron-quote-card">
+          <p>"A flanking kill with the sawed-off. Messy. Effective. I'd applaud, but I'm saving my hands for your eulogy."</p>
+        </div>
+        <div class="baron-quote-card">
+          <p>"Three dead in one turn. You're either very skilled or very lucky. Let's find out which."</p>
+        </div>
+        <div class="baron-quote-card">
+          <p>"Your herbalist just drew a veve while standing in fire. That's not bravery — that's a cry for help."</p>
+        </div>
+        <div class="baron-quote-card">
+          <p>"Squad wipe. Beautiful. I'll send flowers — to myself, for having to watch that."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>⚜ ☦ ⚜</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CAMPAIGN & MISSIONS -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-accent" id="campaign">
+  <div class="container">
+    <h2 class="section-title">Campaign &amp; Missions</h2>
+    <p class="section-subtitle">The bayou has a story to tell. It won't be gentle.</p>
+
+    <div class="campaign-overview">
+      <div class="campaign-structure">
+        <h3>Episode Structure</h3>
+        <p class="campaign-episode">"The Crossroads"</p>
+        <div class="chapter-flow">
+          <div class="chapter-node">
+            <span class="chapter-num">I</span>
+            <span class="chapter-name">Arrival</span>
+          </div>
+          <div class="chapter-arrow">→</div>
+          <div class="chapter-node">
+            <span class="chapter-num">II</span>
+            <span class="chapter-name">Escalation</span>
+          </div>
+          <div class="chapter-arrow">→</div>
+          <div class="chapter-node">
+            <span class="chapter-num">III</span>
+            <span class="chapter-name">The Deal</span>
+          </div>
+        </div>
+        <p>Navigate a Louisiana bayou overworld map with connected mission nodes. Story missions advance the narrative; side missions strengthen your squad and reveal the bayou's secrets.</p>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">Mission Types</h3>
+    <div class="mission-type-grid">
+      <div class="mission-type-card"><span class="mission-icon">⚔</span> Elimination</div>
+      <div class="mission-type-card"><span class="mission-icon">🛡</span> Defense</div>
+      <div class="mission-type-card"><span class="mission-icon">🔓</span> Rescue</div>
+      <div class="mission-type-card"><span class="mission-icon">🔍</span> Investigation</div>
+      <div class="mission-type-card"><span class="mission-icon">✦</span> Ritual</div>
+      <div class="mission-type-card"><span class="mission-icon">💀</span> Boss</div>
+    </div>
+
+    <h3 class="subsection-title">Featured Missions</h3>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <h4>First Blood</h4>
+        <p class="mission-setting">Cemetery — Dawn</p>
+        <p>Clear the graveyard. Your first mission. Your first taste of what the bayou has been hiding. The zombies are slow, but they're everywhere, and the sun isn't going to save you.</p>
+      </div>
+      <div class="mission-card">
+        <h4>Bayou Ambush</h4>
+        <p class="mission-setting">Bayou — Dusk</p>
+        <p>You're the bait. Hostile cowboys have set up an ambush along the waterway, and your job is to spring it — on your terms. Terrain advantage is everything when the water costs double to cross.</p>
+      </div>
+      <div class="mission-card">
+        <h4>The Crossroads Deal</h4>
+        <p class="mission-setting">Crossroads — Midnight</p>
+        <p>A midnight meeting with Baron Samedi himself. This isn't a combat mission — it's a negotiation. And the stakes are your squad's souls. Choose your words carefully. He's listening to everything you don't say.</p>
+      </div>
+    </div>
+
+    <h3 class="subsection-title">Environments</h3>
+    <div class="environment-grid">
+      <div class="env-card">
+        <h4>Bayou Standard</h4>
+        <p>Murky water, hanging moss, cypress trees. Reduced visibility, difficult terrain, and things moving beneath the surface. The bayou is beautiful — and it wants to kill you.</p>
+      </div>
+      <div class="env-card">
+        <h4>Dusk Defense</h4>
+        <p>Long shadows and fading light. Visibility drops each turn as the sun sets. What was a defensible position at dusk becomes a death trap in the dark. The clock is your enemy.</p>
+      </div>
+      <div class="env-card">
+        <h4>Midnight Ritual</h4>
+        <p>Total darkness punctuated by firelight and veve glow. Fog rolls in from the river. Every shadow could be an enemy — or worse, something that isn't an enemy yet.</p>
+      </div>
+    </div>
+
+    <blockquote class="baron-quote">
+      <p>"The bayou doesn't care about your plans. It had plans first. You're just walking through them."</p>
+      <cite>— Baron Samedi</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☦ ✦ ☦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- MULTIPLAYER -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="multiplayer">
+  <div class="container">
+    <h2 class="section-title">Multiplayer</h2>
+    <p class="section-subtitle">The dead don't discriminate. Neither does the competition.</p>
+
+    <div class="mp-grid">
+      <div class="mp-card">
+        <h3>🌐 Steam Networking Sockets + LAN</h3>
+        <p>Full multiplayer via Valve's Steam Networking Sockets for online play, with ENet for LAN connections. Low latency, reliable, and built on industry-standard networking.</p>
+      </div>
+      <div class="mp-card">
+        <h3>📜 Command Protocol</h3>
+        <p>10 validated command types ensure deterministic combat across all clients. Every action is validated, synchronized, and reproducible. No desync. No cheating. No arguments about what happened.</p>
+      </div>
+      <div class="mp-card">
+        <h3>🎲 Seeded RNG</h3>
+        <p>Random outcomes use seeded RNG for fair, reproducible results. Both players see the same rolls. The universe is consistent — even when it's cruel.</p>
+      </div>
+      <div class="mp-card">
+        <h3>🏛 Lobby System</h3>
+        <p>Squad validation and match configuration before combat begins. Verify builds, set rules, configure the arena. No surprises — except the tactical kind.</p>
+      </div>
+    </div>
+
+    <div class="mp-note">
+      <p>Same codebase handles singleplayer and multiplayer — only the authority layer changes. Play the campaign solo. Challenge a friend. The bayou doesn't care how many people it swallows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>✦ ⚜ ✦</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CONTENT PACK / MOD SYSTEM -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-accent" id="modding">
+  <div class="container">
+    <h2 class="section-title">Content Packs &amp; Modding</h2>
+    <p class="section-subtitle">The lwa welcome new voices.</p>
+
+    <div class="mod-intro">
+      <p>WMTX is built to be <strong>modded from day one</strong>. Drop-in content packs — put a folder in <code>content/</code>, the game picks it up. The same format powers first-party DLC and community mods. No special tools needed. No compilation. Just data and creativity.</p>
+    </div>
+
+    <div class="mod-grid">
+      <div class="mod-card">
+        <h3>Moddable Systems</h3>
+        <ul class="mod-list">
+          <li>Items &amp; Weapons</li>
+          <li>Enemy Types &amp; Behaviors</li>
+          <li>Missions &amp; Maps</li>
+          <li>Lwa Talent Trees</li>
+          <li>Veves &amp; Effects</li>
+          <li>Environments &amp; Weather</li>
+          <li>Dialogue &amp; Baron Lines</li>
+          <li>Crafting Recipes</li>
+        </ul>
+      </div>
+      <div class="mod-card">
+        <h3>Content Scale</h3>
+        <p>Content packs can be anything from a single cosmetic weapon skin to a full expansion with 20 new missions, new enemy types, new lwa trees, and custom environments. The system scales with your ambition.</p>
+        <div class="mod-badge">Steam Workshop Pipeline Ready</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider" aria-hidden="true"><span>☩ ⚜ ☩</span></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TECHNICAL DETAILS -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="section section-dark" id="technical">
+  <div class="container">
+    <h2 class="section-title">Under the Hood</h2>
+    <p class="section-subtitle">Built with intention. Powered by Godot.</p>
+
+    <div class="tech-grid">
+      <div class="tech-item">
+        <h4>Engine</h4>
+        <p>Godot 4.4+ (GDScript)</p>
+      </div>
+      <div class="tech-item">
+        <h4>Terrain</h4>
+        <p>Terrain3D for authentic 3D battlefields</p>
+      </div>
+      <div class="tech-item">
+        <h4>Physics</h4>
+        <p>Physics-based cover, elevation, movement</p>
+      </div>
+      <div class="tech-item">
+        <h4>Shared Universe</h4>
+        <p>Common library with WM3D (the FPS companion)</p>
+      </div>
+      <div class="tech-item">
+        <h4>Platform</h4>
+        <p>PC (Steam) + Android</p>
+      </div>
+      <div class="tech-item">
+        <h4>Studio</h4>
+        <p>Digital Forge Studios Inc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-divider" aria-hidden="true">☦ ✦ ⚜ ✦ ☦</div>
+    <p class="footer-tagline"><em>Every spirit remembers.</em></p>
+    <div class="footer-links">
+      <a href="https://wm.dforge.ca" target="_blank" rel="noopener">⚜ Whispermen Universe Hub</a>
+      <span class="footer-sep">·</span>
+      <a href="https://dforge.ca" target="_blank" rel="noopener">Digital Forge Studios</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Digital Forge Studios Inc.</p>
+  </div>
+</footer>
+
+<!-- Minimal JS: smooth scroll + mobile nav -->
+<script>
+(function() {
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var navH = document.getElementById('mainNav').offsetHeight;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        // Close mobile nav
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('navToggle').classList.remove('open');
+      }
+    });
+  });
+
+  // Mobile nav toggle
+  document.getElementById('navToggle').addEventListener('click', function() {
+    this.classList.toggle('open');
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Sticky nav background
+  var nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+})();
+</script>
 </body>
 </html>
